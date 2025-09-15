@@ -1,0 +1,19 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* this prevents scrolling beyond the limit(bottom scroll) */
+html,
+body {
+    overflow: hidden;
+}
+
+/* scroll bar is gone! */
+/* No blue outline when it's dragged and dropped */
+.webgl {
+    position: fixed;
+    top: 0;
+    left: 0;
+    outline: none;
+}
