@@ -12,7 +12,8 @@ void main(){
 
     // Glitch
     float glitchTime = uTime - modelPosition.y;
-    float glitchStrength = sin(glitchTime) + sin(glitchTime * 3.45) + sin(glitchTime * 8.76);
+    float glitchStrength = sin(glitchTime) + sin(glitchTime * 3.45) + sin(glitchTime * 8.76);   // to make it more unpredictable
+    glitchStrength /= 3.0;
     glitchStrength = smoothstep(0.3, 1.0, glitchStrength);
     glitchStrength *= 0.25;
     modelPosition.x += (random2D(modelPosition.xz + uTime)- 0.5) * glitchStrength;
